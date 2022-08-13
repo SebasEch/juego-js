@@ -158,9 +158,15 @@ const render = (nerdeandola, interfaz) => {
 
 // FUNCION PRINCIPAL DEL JUEGO
 
+const bienvenido = ()=>{
+  let nombre = prompt("ingresa tu nombre para comenzar")
+  return alert (`Bienvenido ${nombre} ya puedes comenzar a nerdear`) 
+}
+
 function main() {
   const nerdeandola = new Nerdeandola(juegoPreguntas);
   const interfaz = new Interfaz();
   render(nerdeandola, interfaz);
 }
+bienvenido();
 main();
