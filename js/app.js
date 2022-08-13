@@ -18,6 +18,30 @@ const preguntas = [
     opciones: ["Benjamin Parker", "Stan Lee", "Julio Verne", "Elon Musk"],
     respuesta: "Benjamin Parker",
   },
+
+  {
+    pregunta:
+      "Cual es el nombre de la actriz que interpreta a Starlight de The Boys?",
+    opciones: [
+      "Rachel McAdams",
+      "Evangeline Lily",
+      "Erin Moriarty",
+      "Elisabeth Shue",
+    ],
+    respuesta: "Erin Moriarty",
+  },
+
+  {
+    pregunta: "¿quien es Nightwing?",
+    opciones: ["Demian Wayne", "Dick Grayson", "Tim Drake", "Jason Todd"],
+    respuesta: "Dick Grayson",
+  },
+
+  {
+    pregunta: "¿cual es el segundo nombre del abuelo Simpson?",
+    opciones: ["Abraham", "Jebediah", "Jeremias", "J"],
+    respuesta: "Jebediah",
+  },
 ];
 
 // DEFINIENDO CLASES
@@ -125,7 +149,10 @@ const render = (nerdeandola, interfaz) => {
         render(nerdeandola, interfaz);
       }
     );
-    interfaz.mostrarProgreso(nerdeandola.preguntaIndex + 1, juegoPreguntas.length)
+    interfaz.mostrarProgreso(
+      nerdeandola.preguntaIndex + 1,
+      juegoPreguntas.length
+    );
   }
 };
 
