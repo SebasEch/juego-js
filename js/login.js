@@ -7,7 +7,7 @@ boton.addEventListener("click", (e) => {
   let usuario = document.getElementById("usuario").value;
   let pass = document.getElementById("pass").value;
 
-  if (usuario == "jose"|| "Jose" || "JOSE" && pass == "1234") {
+  if (usuario == "Jose" && pass == "1234") {
     window.location.href = "juego.html";
     localStorage.setItem("nombre", usuario)
   } else {

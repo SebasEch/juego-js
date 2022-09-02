@@ -49,6 +49,23 @@ const preguntas = [
     opciones: ["Abraham", "Jebediah", "Jeremias", "J"],
     respuesta: "Jebediah",
   },
+
+  {
+    pregunta: "¿Que cancion suena al principio de IronMan 1?",
+    opciones: ["Iron Man, Black Sabbath", "Showbiz, Muse", "Paranoid, Black Sabbath", "Back in Black, AC/DC"],
+    respuesta: "Back in Black, AC/DC",
+  },
+
+  {
+    pregunta: "¿quien es el director de Pulp Fiction?",
+    opciones: ["Martin Scorsese", "Tim Burton", "Quentin Tarantino", "Stanley Kubric"],
+    respuesta: "Quentin Tarantino",
+  },
+  {
+    pregunta: "¿quien es el director de Pulp Fiction?",
+    opciones: ["Martin Scorsese", "Tim Burton", "Quentin Tarantino", "Stanley Kubric"],
+    respuesta: "Quentin Tarantino",
+  },
 ];
 
 
