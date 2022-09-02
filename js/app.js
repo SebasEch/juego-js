@@ -1,4 +1,11 @@
+
+// LLamada al localStorage
+
+const jugador = localStorage.getItem("nombre")
+
+
 // PREGUNTAS Y RESPUESTAS MEDIANTE OBJETOS Y ARRAYS
+
 const preguntas = [
   {
     pregunta: "¿cual de los siguientes es un personaje de dc comics?",
@@ -43,6 +50,8 @@ const preguntas = [
     respuesta: "Jebediah",
   },
 ];
+
+
 
 // DEFINIENDO CLASES
 
@@ -100,15 +109,21 @@ class Nerdeandola {
   }
 }
 
+
+
 // INTERFAZ HTML
 
 class Interfaz {
+  mostrarJugador(usuario) {
+    document.getElementById("jugador").innerHTML = jugador;
+  }
   mostrarPregunta(texto) {
     const preguntaTitle = document.getElementById("preguntar");
     preguntaTitle.innerText = texto;
   }
 
   mostrarOpciones(opciones, callback) {
+    const style = document.documentElement.style;
     const contenedorOpciones = document.getElementById("opciones");
     contenedorOpciones.innerHTML = "";
     for (let i = 0; i < opciones.length; i++) {
@@ -135,6 +150,8 @@ class Interfaz {
   }
 }
 
+
+
 //FUNCION PARA RENDERIZAR EL HTML
 
 const render = (nerdeandola, interfaz) => {
@@ -149,8 +166,9 @@ const render = (nerdeandola, interfaz) => {
         render(nerdeandola, interfaz);
       }
     );
+    interfaz.mostrarJugador()
     interfaz.mostrarProgreso(
-      nerdeandola.preguntaIndex + 1,
+      nerdeandola.preguntaIndex +1,
       juegoPreguntas.length
     );
   }
@@ -158,15 +176,13 @@ const render = (nerdeandola, interfaz) => {
 
 // FUNCION PRINCIPAL DEL JUEGO
 
-const bienvenido = ()=>{
-  let nombre = prompt("ingresa tu nombre para comenzar")
-  return alert (`Bienvenido ${nombre} ya puedes comenzar a nerdear`) 
-}
 
 function main() {
   const nerdeandola = new Nerdeandola(juegoPreguntas);
   const interfaz = new Interfaz();
   render(nerdeandola, interfaz);
 }
-bienvenido();
-main();
+main()
+
+
+

@@ -1,0 +1,26 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #a8c2e3;
+    width: 25rem;
+    padding: 3rem;
+    border-radius: 1em;
+    border-color: rgb(51, 48, 48);
+    text-align: center;
+    
+    .logtitle {
+        color: #743b88;
+        font-size: 1.5rem;
+    }
+    hr {
+        width: 95%;
+        height: 1px;
+        background-color: rgba(43, 39, 39, 0.459);
+    }
+    .btn {
+        color: white;
+        background-color: $btncolor;
+    }
+}
