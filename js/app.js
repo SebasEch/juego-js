@@ -128,8 +128,7 @@ class Nerdeandola {
         toast: true,
         confirmButtonText: "Aceptar",
         padding:"3em",
-        background: "#a1ad58",
-        allowOutsideClick: false,	
+        background: "#a1ad58",	
         confirmButtonColor: "#2d4932da",
           })   
     } else {
@@ -140,8 +139,7 @@ class Nerdeandola {
         toast: true,
         confirmButtonText: "Aceptar",
         padding:"3em",
-        background: "#3b1919",
-        allowOutsideClick: false,	
+        background: "#3b1919",	
         confirmButtonColor: "#2d4932da",
           }) 
     }
