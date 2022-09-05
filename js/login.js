@@ -11,6 +11,17 @@ boton.addEventListener("click", (e) => {
     window.location.href = "juego.html";
     localStorage.setItem("nombre", usuario)
   } else {
-    alert("datos incorrectos");
+    Swal.fire({
+	title: "Error!",
+	text: "datos ingresados no validos",
+	icon: "warning",
+	confirmButtonText: "Aceptar",
+	padding:"3em",
+	background: "#849765",
+	allowOutsideClick: false,	
+	confirmButtonColor: "#2d4932da",
+	showCloseButton: true,
+    })   
   }
-});
+}
+)

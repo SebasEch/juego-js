@@ -1,5 +1,5 @@
 body {
-    background: #6783A4;
+    background-image: url(../../imagenes/img1.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #a8c2e3;
+        background: $bgcolor;
         width: 25rem;
         padding: 3rem;
         text-align: center;
@@ -19,12 +19,21 @@ body {
         border-color: rgb(51, 48, 48);
         
         h1 {
-            color: #743b88;
+            color: $titlecolor;
             font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        h2{
+            color:#ffffff85
+        }
+
+        h3{
+           margin-top: 0; 
         }
 
         #jugador {
-            background-color: rgb(107, 136, 173);
+            background-color: $btncolor;
             border-radius: 5px;
             padding: 5px;
             color: #ffffff;
@@ -36,8 +45,8 @@ body {
             height: 1px;
             background-color: rgba(43, 39, 39, 0.459);
         }
-        #pregunta {
-            color: #3a68a0;
+        #preguntar {
+            color: $titlecolor;
 
         }
         #opciones {
@@ -55,16 +64,13 @@ body {
                 
                 &:hover {
                     cursor: pointer;
-                    background-color: #7b47af
+                    background-color: $btncolorb;
                 }
             }
         }
         #progreso {
-            color: #743b88;
+            color: $titlecolor;
             font-size: 1.2rem;
         }
-    }
-    footer {
-        padding-top: 2rem;
     }
 }

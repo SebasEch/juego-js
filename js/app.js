@@ -1,8 +1,6 @@
-
 // LLamada al localStorage
 
-const jugador = localStorage.getItem("nombre")
-
+const jugador = localStorage?.getItem("nombre");
 
 // PREGUNTAS Y RESPUESTAS MEDIANTE OBJETOS Y ARRAYS
 
@@ -52,23 +50,32 @@ const preguntas = [
 
   {
     pregunta: "¿Que cancion suena al principio de IronMan 1?",
-    opciones: ["Iron Man, Black Sabbath", "Showbiz, Muse", "Paranoid, Black Sabbath", "Back in Black, AC/DC"],
+    opciones: [
+      "Iron Man, Black Sabbath",
+      "Showbiz, Muse",
+      "Paranoid, Black Sabbath",
+      "Back in Black, AC/DC",
+    ],
     respuesta: "Back in Black, AC/DC",
   },
 
   {
     pregunta: "¿quien es el director de Pulp Fiction?",
-    opciones: ["Martin Scorsese", "Tim Burton", "Quentin Tarantino", "Stanley Kubric"],
+    opciones: [
+      "Martin Scorsese",
+      "Tim Burton",
+      "Quentin Tarantino",
+      "Stanley Kubric",
+    ],
     respuesta: "Quentin Tarantino",
   },
   {
-    pregunta: "¿quien es el director de Pulp Fiction?",
-    opciones: ["Martin Scorsese", "Tim Burton", "Quentin Tarantino", "Stanley Kubric"],
-    respuesta: "Quentin Tarantino",
+    pregunta:
+      "¿Cual de las tortugas ninjas tiene como arma predilecta los sai?",
+    opciones: ["Leonardo", "Donatello", "Miguelangel", "Rafael"],
+    respuesta: "Rafael",
   },
 ];
-
-
 
 // DEFINIENDO CLASES
 
@@ -99,8 +106,6 @@ const juegoPreguntas = preguntas.map(
   (pregunta) =>
     new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta)
 );
-// en el siguiente console.log pruebo que todo este corriendo bien, cambiando el indice y el string para ver si me devuelve true o false
-// console.log(juegoPreguntas[2].respuestaCorrecta("Benjamin Parker"))
 
 // CLASE CON LA MECANICA DEL JUEGO
 class Nerdeandola {
@@ -114,9 +119,31 @@ class Nerdeandola {
     return this.juegoPreguntas[this.preguntaIndex];
   }
   adivinar(respuesta) {
-    console.log(respuesta);
     if (this.preguntaIndexActual().respuestaCorrecta(respuesta)) {
       this.puntaje++;
+      Swal.fire({
+        title: "Adivinaste!!",
+        text: "Vamos por la proxima!",
+        icon: "success",
+        toast: true,
+        confirmButtonText: "Aceptar",
+        padding:"3em",
+        background: "#a1ad58",
+        allowOutsideClick: false,	
+        confirmButtonColor: "#2d4932da",
+          })   
+    } else {
+      Swal.fire({
+        title: "Fallaste!",
+        text: "Veamos si adivinas la siguiente",
+        icon: "error",
+        toast: true,
+        confirmButtonText: "Aceptar",
+        padding:"3em",
+        background: "#3b1919",
+        allowOutsideClick: false,	
+        confirmButtonColor: "#2d4932da",
+          }) 
     }
     this.preguntaIndex++;
   }
@@ -125,8 +152,6 @@ class Nerdeandola {
     return this.juegoPreguntas.length === this.preguntaIndex;
   }
 }
-
-
 
 // INTERFAZ HTML
 
@@ -167,8 +192,6 @@ class Interfaz {
   }
 }
 
-
-
 //FUNCION PARA RENDERIZAR EL HTML
 
 const render = (nerdeandola, interfaz) => {
@@ -183,9 +206,9 @@ const render = (nerdeandola, interfaz) => {
         render(nerdeandola, interfaz);
       }
     );
-    interfaz.mostrarJugador()
+    interfaz.mostrarJugador();
     interfaz.mostrarProgreso(
-      nerdeandola.preguntaIndex +1,
+      nerdeandola.preguntaIndex + 1,
       juegoPreguntas.length
     );
   }
@@ -193,13 +216,9 @@ const render = (nerdeandola, interfaz) => {
 
 // FUNCION PRINCIPAL DEL JUEGO
 
-
 function main() {
   const nerdeandola = new Nerdeandola(juegoPreguntas);
   const interfaz = new Interfaz();
   render(nerdeandola, interfaz);
 }
-main()
-
-
-
+main();
