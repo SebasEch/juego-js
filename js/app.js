@@ -216,7 +216,7 @@ const render = (nerdeandola, interfaz) => {
 
 // FUNCION PRINCIPAL DEL JUEGO
 
-function main() {
+const main = () => {
   const nerdeandola = new Nerdeandola(juegoPreguntas);
   const interfaz = new Interfaz();
   render(nerdeandola, interfaz);
