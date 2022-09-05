@@ -123,7 +123,7 @@ class Nerdeandola {
       this.puntaje++;
       Swal.fire({
         title: "Adivinaste!!",
-        text: "Vamos por la proxima!",
+        text: "Buen Trabajo :) !!!",
         icon: "success",
         toast: true,
         confirmButtonText: "Aceptar",
@@ -135,7 +135,7 @@ class Nerdeandola {
     } else {
       Swal.fire({
         title: "Fallaste!",
-        text: "Veamos si adivinas la siguiente",
+        text: "Shit Happens!",
         icon: "error",
         toast: true,
         confirmButtonText: "Aceptar",
