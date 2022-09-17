@@ -2,8 +2,8 @@
 
 const jugador = localStorage?.getItem("nombre");
 
-// PREGUNTAS Y RESPUESTAS MEDIANTE OBJETOS Y ARRAYS
 
+// PREGUNTAS Y RESPUESTAS MEDIANTE OBJETOS Y ARRAYS
 const preguntas = [
   {
     pregunta: "¿cual de los siguientes es un personaje de dc comics?",
@@ -127,10 +127,10 @@ class Nerdeandola {
         icon: "success",
         toast: true,
         confirmButtonText: "Aceptar",
-        padding:"3em",
-        background: "#a1ad58",	
+        padding: "3em",
+        background: "#a1ad58",
         confirmButtonColor: "#2d4932da",
-          })   
+      })
     } else {
       Swal.fire({
         title: "Fallaste!",
@@ -138,10 +138,10 @@ class Nerdeandola {
         icon: "error",
         toast: true,
         confirmButtonText: "Aceptar",
-        padding:"3em",
-        background: "#3b1919",	
+        padding: "3em",
+        background: "#3b1919",
         confirmButtonColor: "#2d4932da",
-          }) 
+      })
     }
     this.preguntaIndex++;
   }
@@ -154,6 +154,7 @@ class Nerdeandola {
 // INTERFAZ HTML
 
 class Interfaz {
+
   mostrarJugador(usuario) {
     document.getElementById("jugador").innerHTML = jugador;
   }
@@ -163,7 +164,6 @@ class Interfaz {
   }
 
   mostrarOpciones(opciones, callback) {
-    const style = document.documentElement.style;
     const contenedorOpciones = document.getElementById("opciones");
     contenedorOpciones.innerHTML = "";
     for (let i = 0; i < opciones.length; i++) {
@@ -195,6 +195,7 @@ class Interfaz {
 const render = (nerdeandola, interfaz) => {
   if (nerdeandola.finDeJuego()) {
     interfaz.mostrarPuntaje(nerdeandola.puntaje);
+    mostrarCorrectas()
   } else {
     interfaz.mostrarPregunta(nerdeandola.preguntaIndexActual().texto);
     interfaz.mostrarOpciones(
@@ -212,6 +213,25 @@ const render = (nerdeandola, interfaz) => {
   }
 };
 
+//FUNCION PARA MOSTRAR RESPUESTAS CORRECTAS (utilizando fetch de manera local mediante json)
+
+const mostrarCorrectas = () => {
+  fetch("respuestas.json")
+    .then(response => response.json())
+    .then(data => {
+      let correctas = "";
+      data.forEach((data) => {
+        correctas += `<div class="respContenedor">
+      <h3 class="respuesta">${data.resp}</h3>
+      <p class="descripcion">${data.descripcion}</p>
+      </div>`
+      })
+
+      document.getElementById("nerdContenedor").innerHTML = correctas;
+    })
+}
+
+
 // FUNCION PRINCIPAL DEL JUEGO
 
 const main = () => {
@@ -220,3 +240,4 @@ const main = () => {
   render(nerdeandola, interfaz);
 }
 main();
+
