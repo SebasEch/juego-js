@@ -1,11 +1,47 @@
 [
     {
+        "pregunta": "¿cual de los siguientes es un personaje de dc comics?",
         "resp": " The Joker",
         "descripcion": "a veces traducido como Guasón o Comodín, es un personaje creado por Bill Finger, Bob Kane y Jerry Robinson, e introducido en el primer ejemplar del comic book Batman, en abril de 1940, publicado por DC Comics"
     },
     {
-        "resp":"Jean Grey", 
-        "descripcion":"es una superheroína ficticia que aparece en los cómics estadounidenses publicados por Marvel Comics. Jean es catalogada como la mutante más poderosa del universo Marvel"
+        "pregunta": "¿cual de los siguientes es un personaje de Marvel?",
+        "resp": "Jean Grey",
+        "descripcion": "es una superheroína ficticia que aparece en los cómics estadounidenses publicados por Marvel Comics. Jean es catalogada como la mutante más poderosa del universo Marvel"
+    },
+    {
+        "pregunta": "¿quien dijo la frase: 'todo poder conlleva una gran responsabilidad'?",
+        "resp": "Benjamin Parker",
+        "descripcion": "Benjamin Franklin Parker, generalmente conocido como Ben Parker o el tío Ben, es un personaje ficticio que aparece en los cómics estadounidenses publicados por Marvel Comics, asociado con el superhéroe Spider-Man."
+    },
+    {
+        "pregunta": "Cual es el nombre de la actriz que interpreta a Starlight de The Boys?",
+        "resp": "Erin Moriarty",
+        "descripcion": "Erin Elair Moriarty es una actriz estadounidense. A partir de 2019, Moriarty forma parte del elenco principal de la serie original de Amazon Prime Video The Boys basada en la serie de cómics del mismo nombre, interpretando a Starlight."
+    },
+    {
+        "pregunta": "¿quien es Nightwing?",
+        "resp": "Dick Grayson",
+        "descripcion": "Richard John Grayson, conocido como Ricardo Tapia en algunos doblajes, aparece por primera vez en Detective Comics en abril de 1940 encarnando a Robin. En Tales of the Teen Titans, en julio de 1984, el personaje retira su papel de Robin y asume como el superheroe Nightwing"
+    },
+    {
+        "pregunta": "¿cual es el segundo nombre del abuelo Simpson?",
+        "resp": "Jebediah",
+        "descripcion": "Abraham «Abe» Jebediah Simpson, más conocido como el Abuelo, es un personaje de ficción de la serie de televisión de dibujos animados Los Simpson. En ella, es el padre de Homero Simpson"
+    },
+    {
+        "pregunta": "¿Que cancion suena al principio de IronMan 1?",
+        "resp": "Back in Black, AC/DC",
+        "descripcion": "Back in Black es la sexta pista del disco de AC/DC del mismo nombre, caracterizada por su conocido riff de guitarra que abre la misma."
+    },
+    {
+        "pregunta": "¿quien es el director de Pulp Fiction?",
+        "resp": "Quentin Tarantino",
+        "descripcion": "Quentin Jerome Tarantino es un director de cine, productor, guionista, editor y actor estadounidense. En 1994 dirigió la pelicula Pulp Fiction"
+    },
+    {
+        "pregunta": "¿Cual de las tortugas ninjas tiene como arma predilecta los sai?",
+        "resp": "Rafael",
+        "descripcion": "Rafael es uno de los cuatro personajes principales de los cómics Tortugas ninja. Es normal que experimente extremos de ira o rabia, se lo describe como malhumorado, agresivo, hosco, enloquecido y rebelde, por todo esto su maestro le dio armas especializadas en la  defensiva: los sai gemelos"
     }
-
 ]

@@ -222,11 +222,12 @@ const mostrarCorrectas = () => {
       let correctas = "";
       data.forEach((data) => {
         correctas += `<div class="respContenedor">
+      <h3 class="respuesta">${data.pregunta}</h3>  
       <h3 class="respuesta">${data.resp}</h3>
       <p class="descripcion">${data.descripcion}</p>
+      <hr>
       </div>`
       })
-
       document.getElementById("nerdContenedor").innerHTML = correctas;
     })
 }

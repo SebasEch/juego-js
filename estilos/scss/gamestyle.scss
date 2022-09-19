@@ -12,7 +12,7 @@ body {
         justify-content: center;
         align-items: center;
         background: $bgcolor;
-        width: 25rem;
+        width: 50%;
         padding: 3rem;
         text-align: center;
         border-radius: 1em;
@@ -25,11 +25,15 @@ body {
         }
 
         h2{
-            color:#ffffff85
+            color: $titlecolorb;
         }
 
         h3{
-           margin-top: 0; 
+           margin-top: 10px; 
+           color: $titlecolor
+        }
+        p{
+            color: $titlecolorb;
         }
 
         #jugador {
