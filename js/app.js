@@ -79,7 +79,7 @@ const preguntas = [
 
 // AGREGO PREGUNTA MEDIANTE EL METODO DE ARRAY "PUSH"
 
-let bonus = preguntas.push({
+let agregaPregunta = preguntas.push({
   pregunta: "¿cual de los siguientes juegos de mesa se trata de colonizar una isla?",
   opciones: ["TEG", "Monopoly", "Catan", "Risk"],
   respuesta: "Catan",
@@ -117,7 +117,7 @@ const juegoPreguntas = preguntas.map(
 );
 
 // CLASE CON LA MECANICA DEL JUEGO
-class Nerdeandola {
+class Trivia {
   preguntaIndex = 0;
   puntaje = 0;
 
@@ -139,6 +139,7 @@ class Nerdeandola {
         padding: "3em",
         background: "#a1ad58",
         confirmButtonColor: "#2d4932da",
+        timer: 1000,
       })
     } else {
       Swal.fire({
@@ -150,6 +151,7 @@ class Nerdeandola {
         padding: "3em",
         background: "#3b1919",
         confirmButtonColor: "#2d4932da",
+       timer: 1000
       })
     }
     this.preguntaIndex++;
@@ -191,7 +193,7 @@ class Interfaz {
     <h2>Tu puntaje: ${puntaje}</h2>
     <button class="btn" onclick="mostrarCorrectas()">Aceptar</button>
     `;
-    const element = document.getElementById("nerdContenedor");
+    const element = document.getElementById("triviaContenedor");
     element.innerHTML = puntosHtml;
   }
 
@@ -203,22 +205,22 @@ class Interfaz {
 
 //FUNCION PARA RENDERIZAR EL HTML
 
-const render = (nerdeandola, interfaz) => {
-  if (nerdeandola.finDeJuego()) {
-    interfaz.mostrarPuntaje(nerdeandola.puntaje);
+const render = (trivia, interfaz) => {
+  if (trivia.finDeJuego()) {
+    interfaz.mostrarPuntaje(trivia.puntaje);
     // mostrarCorrectas()
   } else {
-    interfaz.mostrarPregunta(nerdeandola.preguntaIndexActual().texto);
+    interfaz.mostrarPregunta(trivia.preguntaIndexActual().texto);
     interfaz.mostrarOpciones(
-      nerdeandola.preguntaIndexActual().opciones,
+      trivia.preguntaIndexActual().opciones,
       (opcionActual) => {
-        nerdeandola.adivinar(opcionActual);
-        render(nerdeandola, interfaz);
+        trivia.adivinar(opcionActual);
+        render(trivia, interfaz);
       }
     );
     interfaz.mostrarJugador();
     interfaz.mostrarProgreso(
-      nerdeandola.preguntaIndex + 1,
+      trivia.preguntaIndex + 1,
       juegoPreguntas.length
     );
   }
@@ -239,7 +241,7 @@ const mostrarCorrectas = () => {
       <hr>
       </div>`
       })
-      document.getElementById("nerdContenedor").innerHTML = correctas;
+      document.getElementById("triviaContenedor").innerHTML = correctas;
     })
 }
 
@@ -247,9 +249,9 @@ const mostrarCorrectas = () => {
 // FUNCION PRINCIPAL DEL JUEGO
 
 const main = () => {
-  const nerdeandola = new Nerdeandola(juegoPreguntas);
+  const trivia = new Trivia(juegoPreguntas);
   const interfaz = new Interfaz();
-  render(nerdeandola, interfaz);
+  render(trivia, interfaz);
 }
 main();
 

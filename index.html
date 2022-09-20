@@ -30,7 +30,13 @@
   </form>
   <hr>
   <p>Este login es a modo de prueba con fines de practica <br> ingrese "Jose" en lugar de usuario y "1234" en lugar de
-    contraseña</p>
+    contraseña, o entra como invitado</p>
+    <hr>
+    <div class="mb-3">
+      <label for="exampleName" class="form-label">Ingrea tu nombre para jugar como invitado</label>
+      <input type="text" class="form-control" id="usuarioInvitado" aria-describedby="nameHelp">
+    </div>
+    <button type="submit" id="entrarInvitado" class="btn">Entrar</button>
   </div>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/login.js"></script>

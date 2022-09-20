@@ -1,52 +1,56 @@
 body {
   background-image: url(../../imagenes/img1.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
-  body #nerdContenedor {
+  height: 100vh;
+  display: grid; }
+  body #triviaContenedor {
+    display: block;
+    align-self: center;
+    justify-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #576147d3;
-    width: 50%;
     padding: 3rem;
     text-align: center;
     border-radius: 1em;
     border-color: #333030; }
-    body #nerdContenedor .btn {
+    body #triviaContenedor .btn {
       color: white;
       background-color: #8daf55dc; }
-    body #nerdContenedor h1 {
+    body #triviaContenedor h1 {
       color: #95a344;
       font-size: 2.5rem;
       margin-bottom: 0; }
-    body #nerdContenedor h2 {
+    body #triviaContenedor h2 {
       color: #ffffff85; }
-    body #nerdContenedor h3 {
+    body #triviaContenedor h3 {
       margin-top: 10px;
       color: #95a344; }
-    body #nerdContenedor p {
+    body #triviaContenedor p {
       color: #ffffff85; }
-    body #nerdContenedor #jugador {
+    body #triviaContenedor #jugador {
       background-color: #8daf55dc;
       border-radius: 5px;
       padding: 5px;
       color: #ffffff;
       font-size: 1.5rem;
       margin: 0 auto; }
-    body #nerdContenedor hr {
+    body #triviaContenedor hr {
       width: 95%;
       height: 1px;
       background-color: rgba(43, 39, 39, 0.459); }
-    body #nerdContenedor #preguntar {
+    body #triviaContenedor #preguntar {
       color: #95a344; }
-    body #nerdContenedor #opciones {
+    body #triviaContenedor #opciones {
       display: flex;
       flex-direction: column; }
-      body #nerdContenedor #opciones .button {
+      body #triviaContenedor #opciones .button {
         background-color: #8daf55dc;
         color: white;
         width: 200px;
@@ -54,10 +58,10 @@ body {
         border-radius: 1rem;
         padding: 8px 16px;
         margin: 5px 25px 5px; }
-        body #nerdContenedor #opciones .button:hover {
+        body #triviaContenedor #opciones .button:hover {
           cursor: pointer;
           background-color: #0b531b; }
-    body #nerdContenedor #progreso {
+    body #triviaContenedor #progreso {
       color: #95a344;
       font-size: 1.2rem; }
 
@@ -86,5 +90,8 @@ body {
     body .contenedor .btn {
       color: white;
       background-color: #8daf55dc; }
+    body .contenedor .btnInvitado {
+      color: white;
+      background-color: #8daf55dc; }
     body .contenedor p {
-      color: #ffffff; }
+      color: #ffffff67; }

@@ -1,8 +1,6 @@
 // LOGIN (guarda nombre en localStorage para poder mostrarlo luego en el juego)
 
-// FUNCION PARA DATOS NO VALIDOS
-
-// Entiendo que podria haber hecho directamente un condicional sin hacer la funcion y poner el alerta en el else, pero lo hice de esta manera para aplicar operador ternario
+// FUNCION PARA DATOS NO VALIDOS, Entiendo que podria haber hecho directamente un condicional sin hacer la funcion y poner el alerta en el else, pero lo hice de esta manera para aplicar operador ternario
 
 const alertaDatosNoValidos = () => {
   Swal.fire({
@@ -28,6 +26,16 @@ boton.addEventListener("click", (e) => {
   let pass = document.getElementById("pass").value;
 
   usuario == "Jose" && pass == "1234" ? (window.location.href = "juego.html", localStorage.setItem("nombre", usuario)) : alertaDatosNoValidos()
+})
+
+//EVENTO EN EL BOTON PARA ENTRAR CONMO INVITADO, REDIRIGE A LA APP.
+
+let botonInvitado = document.getElementById("entrarInvitado");
+
+botonInvitado.addEventListener("click", (e) => {
+  e.preventDefault();
+  let usuario = document.getElementById("usuarioInvitado").value;
+  window.location.href = "juego.html", localStorage.setItem("nombre", usuario)
 })
 
 
