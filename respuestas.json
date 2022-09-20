@@ -43,5 +43,10 @@
         "pregunta": "¿Cual de las tortugas ninjas tiene como arma predilecta los sai?",
         "resp": "Rafael",
         "descripcion": "Rafael es uno de los cuatro personajes principales de los cómics Tortugas ninja. Es normal que experimente extremos de ira o rabia, se lo describe como malhumorado, agresivo, hosco, enloquecido y rebelde, por todo esto su maestro le dio armas especializadas en la  defensiva: los sai gemelos"
+    },
+    {
+        "pregunta": "¿cual de los siguientes juegos de mesa se trata de colonizar una isla?",
+        "resp": "Catan",
+        "descripcion": " Catan, es un juego de mesa multijugador inventado por Klaus Teuber. El objetivo del juego es construir pueblos, ciudades y caminos sobre un tablero que es distinto cada vez, mientras se van acumulando varios tipos de cartas"
     }
 ]

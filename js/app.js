@@ -37,7 +37,7 @@ const preguntas = [
   },
 
   {
-    pregunta: "¿quien es Nightwing?",
+    pregunta: "¿cual es la identidad de Nightwing?",
     opciones: ["Demian Wayne", "Dick Grayson", "Tim Drake", "Jason Todd"],
     respuesta: "Dick Grayson",
   },
@@ -76,6 +76,15 @@ const preguntas = [
     respuesta: "Rafael",
   },
 ];
+
+// AGREGO PREGUNTA MEDIANTE EL METODO DE ARRAY "PUSH"
+
+let bonus = preguntas.push({
+  pregunta: "¿cual de los siguientes juegos de mesa se trata de colonizar una isla?",
+  opciones: ["TEG", "Monopoly", "Catan", "Risk"],
+  respuesta: "Catan",
+})
+
 
 // DEFINIENDO CLASES
 
@@ -147,6 +156,7 @@ class Nerdeandola {
   }
 
   finDeJuego() {
+
     return this.juegoPreguntas.length === this.preguntaIndex;
   }
 }
@@ -179,6 +189,7 @@ class Interfaz {
     const puntosHtml = `
     <h1>Resultado</h1>
     <h2>Tu puntaje: ${puntaje}</h2>
+    <button class="btn" onclick="mostrarCorrectas()">Aceptar</button>
     `;
     const element = document.getElementById("nerdContenedor");
     element.innerHTML = puntosHtml;
@@ -195,7 +206,7 @@ class Interfaz {
 const render = (nerdeandola, interfaz) => {
   if (nerdeandola.finDeJuego()) {
     interfaz.mostrarPuntaje(nerdeandola.puntaje);
-    mostrarCorrectas()
+    // mostrarCorrectas()
   } else {
     interfaz.mostrarPregunta(nerdeandola.preguntaIndexActual().texto);
     interfaz.mostrarOpciones(

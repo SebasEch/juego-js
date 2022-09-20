@@ -17,6 +17,10 @@ body {
         text-align: center;
         border-radius: 1em;
         border-color: rgb(51, 48, 48);
+        .btn {
+            color: white;
+            background-color: $btncolor;
+        }
         
         h1 {
             color: $titlecolor;
