@@ -1,7 +1,5 @@
 // LOGIN (guarda nombre en localStorage para poder mostrarlo luego en el juego)
 
-// FUNCION PARA DATOS NO VALIDOS, Entiendo que podria haber hecho directamente un condicional sin hacer la funcion y poner el alerta en el else, pero lo hice de esta manera para aplicar operador ternario
-
 const alertaDatosNoValidos = () => {
   Swal.fire({
     title: "Error!",

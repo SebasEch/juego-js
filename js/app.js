@@ -139,7 +139,7 @@ class Trivia {
         padding: "3em",
         background: "#a1ad58",
         confirmButtonColor: "#2d4932da",
-        timer: 1000,
+        timer: 3000,
       })
     } else {
       Swal.fire({
@@ -151,7 +151,7 @@ class Trivia {
         padding: "3em",
         background: "#3b1919",
         confirmButtonColor: "#2d4932da",
-       timer: 1000
+        timer: 2000
       })
     }
     this.preguntaIndex++;
@@ -191,10 +191,11 @@ class Interfaz {
     const puntosHtml = `
     <h1>Resultado</h1>
     <h2>Tu puntaje: ${puntaje}</h2>
-    <button class="btn" onclick="mostrarCorrectas()">Aceptar</button>
+    <button class="btn" id="correctasBtn">Aceptar</button>
     `;
     const element = document.getElementById("triviaContenedor");
     element.innerHTML = puntosHtml;
+
   }
 
   mostrarProgreso(indice, total) {
@@ -208,7 +209,7 @@ class Interfaz {
 const render = (trivia, interfaz) => {
   if (trivia.finDeJuego()) {
     interfaz.mostrarPuntaje(trivia.puntaje);
-    // mostrarCorrectas()
+    correctasBtn.addEventListener("click", () => mostrarCorrectas());
   } else {
     interfaz.mostrarPregunta(trivia.preguntaIndexActual().texto);
     interfaz.mostrarOpciones(
